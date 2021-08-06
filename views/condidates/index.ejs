@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Condidates</title>
+</head>
+
+<body>
+    <h1>List of All Condidates</h1>
+    <ul>
+        <% for(let c of condidates) {%>
+            <li>
+                <a href="condidates/<%= c._id %>">
+                    <%= c.username %>
+                </a>
+            </li>
+            <% } %>
+    </ul>
+
+    <a href="/condidates/new">Add New Condidate</a><br>
+    <a href="/condidates/highestScorers">List of Highest Scorers</a><br>
+    <a href="/condidates/avgScore">List of Avg Score per Round</a>
+
+</body>
+
+</html>
